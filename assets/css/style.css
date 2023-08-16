@@ -1,0 +1,421 @@
+/* Modelo do curriculo: https://image.freepik.com/vetores-gratis/simples-moderno-curriculo-tamplte_1051-1387.jpg */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,700,900');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+}
+
+header>h1 {
+  color: rgba(150, 0, 0, 0.9);
+}
+
+.esquerda {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  /* order: 2; */
+}
+
+.layout {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+@media all and (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .layout {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .esquerda {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .right {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+}
+
+header {
+  padding: 15px 25px;
+}
+
+header h1 {
+  align-items: center;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+header h1>i {
+  margin-right: 0.4rem;
+}
+
+#nome {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#formacao {
+  color: rgba(150, 0, 0, 0.9);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#informacoes-principais {
+  margin: 40px 0;
+}
+
+.secao {
+  border-top: solid 1px rgb(200, 0, 0);
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.secao>h1 {
+  background: rgb(226, 226, 226);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px 20px;
+  margin-bottom: 2rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.container-experiencia {
+  text-align: right;
+}
+
+#informacoes-pessoais p {
+  line-height: 1.3rem;
+  padding: 10px 20px 15px 25px;
+}
+
+#experiencia p {
+  line-height: 1;
+}
+
+#informacoes-pessoais p,
+#experiencia p {
+  font-size: 0.8rem;
+  padding-right: 20px;
+}
+
+.titulo-experiencia {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-right: 20px;
+}
+
+.cargo-experiencia {
+  color: rgba(150, 0, 0, 0.9);
+  text-transform: uppercase;
+}
+
+.data-experiencia {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+.descricao-experiencia {
+  padding-left: 25px;
+}
+
+.container-experiencia {
+  margin-bottom: 2rem;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+/* Aside */
+
+aside {
+  background: #EDEDED;
+  box-shadow: -3px 0 15px rgba(0, 0, 0, 0.5);
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  /* order: 1; */
+}
+
+.imagem-perfil {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagem-perfil img {
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out .3s;
+}
+
+.imagem-perfil img:hover {
+  transform: scale(1.25);
+}
+
+/* Informações gerais - após a foto */
+
+.info-line {
+  align-items: stretch;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  height: 3rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.info-line:hover {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.info-line i {
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.info-line>span {
+  flex: 1;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+
+.info-line a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#info-endereco i {
+  background: rgb(40, 40, 40);
+  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.8) inset;
+}
+
+#info-endereco span {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+#info-telefone i {
+  background: rgb(113, 0, 0);
+  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.8) inset;
+}
+
+#info-telefone span {
+  background: rgba(113, 0, 0, 0.9);
+}
+
+#info-site i {
+  background: rgb(166, 60, 6);
+  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.8) inset;
+}
+
+#info-site span {
+  background: rgba(166, 60, 6, 0.9);
+}
+
+#info-mail i {
+  background: rgb(195, 111, 9);
+  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.8) inset;
+}
+
+#info-mail span {
+  background: rgba(195, 111, 9, 0.9);
+}
+
+.flex-skills {
+  color: #000;
+}
+
+
+
+.flex-skills img {
+  height: 20px;
+  padding-right: 5px;
+}
+
+
+.flex-skills:hover {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+
+.ds-skill {
+  width: 100px;
+  height: 100px;
+}
+
+h6 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skill h6 {
+  font-weight: 400;
+   font-size: 1rem; 
+  letter-spacing: 0.05em;
+}
+
+.fab {
+  color: rgba(150, 0, 0, 0.9);
+  font-size: 14px;
+}
+
+div:where(.bar-html, .bar-css, .bar-js):hover {
+  background: #EDEDED;
+}
+
+.bar {
+  height: 5px;
+  background: rgb(150, 0, 0, 0.9);
+  text-align: right;
+  transition: .2s ease-in;
+}
+
+.bar p {
+  color: #000;
+  font-size: 8px;
+  padding-top: 5px;
+}
+
+.bar:hover {
+  background: white;
+} 
+
+
+.bar-desgin {
+  width: 90%;
+  animation: htmlSkill 1s;
+  animation-delay: .4s;
+}
+
+.bar-front-end {
+  width: 100%;
+  animation: cssSkill 2s;
+  animation-delay: .4s;
+}
+
+.bar-back-end {
+  width: 70%;
+  animation: jsSkill 3s;
+  animation-delay: .4s;
+}
+
+.bar-mobile {
+  width: 75%;
+  animation: jsSkill 3s;
+  animation-delay: .4s;
+}
+
+
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    left: -300px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes htmlSkill {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes cssSkill {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes jsSkill {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes mvBottom {
+  0% {
+    bottom: -150px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes mvTop {
+  0% {
+    top: -150px;
+  }
+
+  100% {
+    top: 40px;
+  }
+}
+
+@keyframes dsTop {
+  0% {
+    top: -150px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
